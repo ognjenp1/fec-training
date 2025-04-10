@@ -1,14 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
   </head>
 
   <body>
     <header class="header">
-      <img src="assets/assets/logo.png" class="header--logo" alt="Exlrt Logo" />
+      <img src="assets/images/logo.png" class="header-logo" alt="Exlrt Logo" />
       <nav class="topnav">
-        <ul class="header--links">
+        <ul class="header-links">
           <li><a href="#platforms">Platform & Services</a></li>
           <li><a href="#about">About Us</a></li>
           <li><a href="#careers">Careers</a></li>
@@ -16,23 +18,35 @@
           <li><a href="#blog">Blog</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
-        <div id="input_container">
-          <input type="text" placeholder="Search" />
-        </div>
       </nav>
+      <div class="search-bar">
+        <input type="text" placeholder="Search" /><!--
+          --><button type="submit"></button>
+      </div>
     </header>
 
     <h1>United we excel</h1>
 
-    <div id="content-box">
-      <div id="content-box--left">
-        <img
-          src="assets/assets/icon-burger.png"
-          class="sidemenu--burger"
-          alt="Sidemenu burger"
-        />
+    <div class="content-box">
+      <div class="content-box--menu">
+        <div class="menu">
+          <div class="menu-item">Kentico <span class="plus">+</span></div>
+          <div class="menu-item">Sitecore <span class="plus">+</span></div>
+
+          <div class="menu-item menu-item--selected">
+            Tridion <span class="minus">−</span>
+          </div>
+          <div class="submenu">
+            <a href="#">RWS Tridion Sites</a>
+            <a href="#">RWS Tridion Docs</a>
+            <a href="#">RWS Language Cloud</a>
+            <a href="#">RWS Trados Studio</a>
+          </div>
+
+          <div class="menu-item">ADAM <span class="plus">+</span></div>
+        </div>
       </div>
-      <div id="content-box--middle">
+      <div class="content-box--articles">
         <div>
           <article class="article article--row-one">
             <section class="article-text">
@@ -47,7 +61,7 @@
             <section>
               <img
                 class="article-image"
-                src="assets/assets/disneyland/image-disney.jpg"
+                src="assets/images/image-disney.jpg"
                 alt="Disneyland"
               />
             </section>
@@ -70,7 +84,7 @@
             <section>
               <img
                 class="article-image"
-                src="assets/assets/turkish/image-turkish.jpg"
+                src="assets/images/image-turkish.jpg"
                 alt="Turkish airlines"
               />
             </section>
@@ -83,7 +97,7 @@
           <article class="article article--row-two">
             <h2>ACI Universal Payments</h2>
             <img
-              src="assets/assets/aci/image-aci.jpg"
+              src="assets/images/image-aci.jpg"
               alt="ACI Payments"
               class="article-image"
             />
@@ -98,7 +112,7 @@
           <article class="article article--row-two">
             <h2>AEG</h2>
             <img
-              src="assets/assets/aeg/image-aeg.jpg"
+              src="assets/images/image-aeg.jpg"
               alt="AEG"
               class="article-image"
             />
@@ -113,7 +127,7 @@
           <article class="article article--row-two">
             <h2>IVC Evidensia</h2>
             <img
-              src="assets/assets/evidensia/image-evidensia.jpg"
+              src="assets/images/image-evidensia.jpg"
               alt="Evidensia"
               class="article-image"
             />
@@ -126,45 +140,45 @@
           </article>
         </div>
       </div>
-      <div id="content-box--right"></div>
+      <div class="content-box--empty"></div>
     </div>
     <footer class="footer">
       <div class="footer-columns">
         <div class="footer-column">
           <h3>WHAT WE OFFER</h3>
           <ul>
-            <li>Rws Tridion</li>
-            <li>Custom Development</li>
-            <li>Kentico</li>
-            <li>Sitecore</li>
+            <li><a href="#">Tridion</a></li>
+            <li><a href="#">Custom Development</a></li>
+            <li><a href="#">Kentico</a></li>
+            <li><a href="#">Sitecore</a></li>
           </ul>
         </div>
         <div class="footer-column">
           <h3>ABOUT US</h3>
           <ul>
-            <li>Company</li>
-            <li>Leadership</li>
-            <li>Partners</li>
+            <li><a href="#">Company</a></li>
+            <li><a href="#">Leadership</a></li>
+            <li><a href="#">Partners</a></li>
           </ul>
         </div>
         <div class="footer-column">
           <h3>CAREERS</h3>
           <ul>
-            <li>Why work at EXLRT</li>
-            <li>Job openings</li>
-            <li>Application procedure</li>
-            <li>Terms of employment</li>
+            <li><a href="#">Why work at EXLRT</a></li>
+            <li><a href="#">Job openings</a></li>
+            <li><a href="#">Application procedure</a></li>
+            <li><a href="#">Terms of employment</a></li>
           </ul>
         </div>
         <div class="footer-column">
           <h3>CONTACT</h3>
           <ul>
-            <li>Location</li>
-            <li>Contact us</li>
-            <li>Ask a question</li>
+            <li><a href="#">Location</a></li>
+            <li><a href="#">Contact us</a></li>
+            <li><a href="#">Ask a question</a></li>
           </ul>
         </div>
-        <div class="footer--footnote">
+        <div class="footer-footnote">
           <p>2022 EXLRT, All rights Reserved</p>
         </div>
       </div>
