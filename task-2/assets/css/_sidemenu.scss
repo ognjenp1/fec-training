@@ -1,0 +1,52 @@
+@use 'variables';
+
+.content-box__menu {
+    float: left;
+    width: 20%;
+    text-align: center
+}
+
+.menu {
+    width: 250px;
+    background-color: #d3d3d3;
+    padding: 10px;
+    border-radius: 6px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+.menu__item {
+    background-color: #999;
+    color: white;
+    padding: 8px 10px;
+    margin-bottom: 6px;
+    border-radius: 4px;
+    font-size: normal;
+    text-align: left;
+
+    .icon {
+        float: right;
+        font-weight: bold;
+    }
+  }
+
+.menu__item--selected {
+    background-color: #f58220;
+}
+
+.submenu {
+    background-color: white;
+    border-radius: 4px;
+    padding: 8px 10px;
+    font-size: normal;
+    margin-top: -4px;
+    margin-bottom: 10px;
+    text-align: left;
+    list-style-type: none;
+
+    a {
+        display: block;
+        color: #000;
+        margin: 4px 0;
+    }
+}

@@ -159,7 +159,7 @@ h1 {
     position: relative;
 }
 
-.article--row-one {
+.article-primary {
     column-count: 2;
     width: 48%;
     min-height: 300px;
@@ -185,7 +185,7 @@ h1 {
 }
 
 .article-text {
-    display: inline-block;
+    float: left;;
     vertical-align: top;
 }
 

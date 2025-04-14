@@ -1,0 +1,163 @@
+@use 'mixins';
+@use 'variables';
+
+.header {
+    background-color: variables.$default-color;
+    overflow: hidden;
+}
+
+.header__images {
+    display: block;
+}
+
+.header__logo {
+    float: right;
+    width: 40%;
+    max-width: 100%;
+    margin: 10px;
+}
+
+.header__burger {
+    margin: 15px;
+    float: left;
+    width: 10%;
+    max-width: 100%;
+}
+
+.nav {
+    display: inline-block;
+    width: 90%;
+    height: 200px;
+    padding: 10px;
+    background-color: variables.$dropdown-color
+}
+
+.topnav {
+    clear: both;
+    display: block;
+    width: 90%;
+}
+
+.header__links {
+    vertical-align: middle;
+    list-style: none;
+    padding: 5px;
+    overflow: hidden;
+    background-color: variables.$dropdown-color;
+    border-color: variables.$dropdown-color;
+
+    a {
+        @include mixins.link(black);
+        text-align: center;
+        font-size: small;
+        margin: 10px;
+    }
+}
+
+.search-bar {
+    float: left;
+    width: 90%;
+    background-color: variables.$dropdown-color;
+    border-color: variables.$dropdown-color;
+    padding: 10px;
+    white-space: nowrap;
+
+    input {
+        display: inline-block;
+        width: 80%;
+        height: 40px;
+        padding: 10px 15px;
+        border: none;
+        border-right: white;
+        font-size: small;
+    }
+
+    button {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        margin: 0;
+        background-image: url('../images/icon-search.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 20px 20px;
+        background-color: white;
+        border: none;
+        vertical-align: top;
+    }
+}
+
+@media (max-width: 1025px){
+    .nav {
+        clear: both;
+
+        ~ div {
+            float: right;
+            background-color: white;
+            width: 10%;
+            height: 200px;
+        }
+    }
+}
+
+@media (min-width: 1026px) {
+    .header__images {
+        width: 10%;
+        float: left;
+    }
+
+    .header__burger {
+        display: none;
+    }
+
+    .header__logo {
+        width: 100%;
+        margin: 0;
+        padding: 20px 0 20px 20px;
+    }
+
+    .nav {
+        float: left;
+        width: 90%;
+        height: auto;
+        background-color: variables.$default-color
+    }
+
+    .topnav {
+        float: left;
+        width: 85%;
+    }
+
+    .header__links {
+        text-align: center;
+        margin-top: 20px;
+        padding: 5px;
+        background-color: variables.$default-color;
+    }
+
+    .header__links li {
+        display: inline;
+    }
+
+    .header__links a {
+        color: black;
+        text-align: center;
+        text-decoration: none;
+        font-weight: normal;
+        font-size: medium;
+    }
+
+    header li + li::before {
+        margin-right: 5px;
+        margin-left: 5px;
+        content: '| ';
+    }
+
+    .search-bar {
+        float: left;
+        width: 15%;
+        background-color: variables.$default-color;
+        padding: 10px;
+        white-space: nowrap;
+    }
+}
