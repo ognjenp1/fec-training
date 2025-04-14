@@ -1,8 +1,15 @@
 @use 'variables';
 
+@media (max-width:1025px) {
+    .content-box__menu {
+        display: none;
+    }
+}
+
 .content-box__menu {
     float: left;
     width: 20%;
+    padding: 10px;
     text-align: center
 }
 
@@ -31,18 +38,25 @@
   }
 
 .menu__item--selected {
-    background-color: #f58220;
+    padding: 0;
+
+    .menu__label {
+        padding: 8px;
+        border-radius: 4px 4px 0 0;
+        background-color: #f58220;
+    }
 }
 
 .submenu {
+    list-style: none;
+    padding: 10px;
     background-color: white;
-    border-radius: 4px;
-    padding: 8px 10px;
-    font-size: normal;
-    margin-top: -4px;
-    margin-bottom: 10px;
-    text-align: left;
-    list-style-type: none;
+    border-radius: 0 0 4px 4px;
+    overflow: hidden;
+
+    li {
+        margin: 0;
+    }
 
     a {
         display: block;

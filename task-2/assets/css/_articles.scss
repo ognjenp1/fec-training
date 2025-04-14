@@ -10,7 +10,7 @@
 
 .article__text {
     float: left;
-    padding: 10px;
+    padding: 0px 10px 10px 10px;
     width: 55%;
 }
 
@@ -59,6 +59,8 @@
 }
 
 .article-secondary {
+    padding-bottom: 10px;
+
     .article__image {
         width: 100%;
         height: 25%;
@@ -109,28 +111,60 @@
         overflow: visible;
     }
 
-    .article {
+    .wrapper {
         float: left;
-        margin: 0;
+        width: 50%;
+
+        &--third {
+            float: left;
+            width: 33.333%;
+        }
     }
 
     .article-primary {
-        width: 49%;
         min-height: 300px;
         height: auto;
         margin-bottom: 20px;
-    }
 
-    .article-primary + .article-primary {
-        margin-right: 0;
-        margin-left: 2%;
+        .article__image {
+            height: 0;
+            overflow: hidden;
+            padding-top: 35%;
+            background: white;
+            position: relative;
+        }
+
+        .article__image img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
     }
 
     .article-secondary {
-        width: 31.5%;
-        min-height: 420px;
-        margin-top: 0;
-        margin-bottom: 20px;
+        min-height: 360px;
+        margin: 0px 10px 10px 10px;
+
+        .article__title {
+            margin-top: 10px;
+        }
+
+        .article__content {
+            float: left;
+            margin-top: 20px;
+        }
+
+        .article__image {
+            float: left;
+            width: 100%;
+            max-height: 150px;
+
+            img {
+                margin: 0;
+            }
+        }
     }
 
     .article__text {
@@ -146,25 +180,5 @@
 
     .article__content {
         font-size: medium;
-    }
-
-    .article__image {
-        height: 0;
-        overflow: hidden;
-        padding-top: 35%;
-        background: white;
-        position: relative;
-    }
-
-    .article__image img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-    }
-
-    .article-secondary .article__image img {
-        margin: 0;
     }
 }
