@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+.article {
+    .article-title {
+        color: orange;
+    }
+
+    .article-link {
+        color:deepskyblue;
+    }
+}
+
+.accordion-item {
+    border-radius: 8px;
+}
+
+.accordion-button {
+    background-color: #999;
+    border-radius: 8px;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color:orange
+}
+
+@media (min-width: 992px) {
+    .header .nav-link {
+        display: inline;
+    }
+
+    nav li + li::before {
+        margin-right: 10px;
+        margin-left: 10px;
+        content: '| ';
+    }
+}

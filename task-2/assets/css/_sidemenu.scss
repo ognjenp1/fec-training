@@ -1,6 +1,6 @@
 @use 'variables';
 
-@media (max-width:1025px) {
+@media (max-width:1024px) {
     .content-box__menu {
         display: none;
     }
@@ -14,7 +14,7 @@
 }
 
 .menu {
-    width: 250px;
+    width: 90%;
     background-color: #d3d3d3;
     padding: 10px;
     border-radius: 6px;
