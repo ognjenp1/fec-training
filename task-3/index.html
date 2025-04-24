@@ -16,8 +16,8 @@
     <link rel="stylesheet" href="assets/css/master.css" />
   </head>
   <body>
-    <header class="header container-fluid">
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <header class="header container-fluid p-0">
+      <nav class="navbar navbar-expand-lg navbar-light pb-0">
         <button
           class="navbar-toggler col-2 d-block d-lg-none order-1"
           type="button"
@@ -26,16 +26,14 @@
         >
           <img src="assets/images/icon-burger.png" class="img-fluid" />
         </button>
-        <div class="col-5 col-lg-2 offset-5 offset-lg-0 order-2 order-lg-1">
+        <div class="col-5 col-lg-2 offset-5 offset-lg-0 order-2 order-lg-1 p-2">
           <img src="assets/images/logo.png" class="img-fluid" />
         </div>
         <div
-          class="collapse navbar-collapse order-3 order-lg-2"
+          class="collapse navbar-collapse order-3 order-lg-2 p-2"
           id="navbarToggleLinks"
         >
-          <ul
-            class="navbar-nav m-auto m-2 col-lg-8 d-lg-flex justify-content-lg-center align-items-lg-center fs-6 fs-lg-normal"
-          >
+          <ul class="navbar-nav m-auto fs-6 fs-lg-normal">
             <li class="nav-item">
               <a class="nav-link active" href="#platforms"
                 >Platform & Services</a
@@ -60,7 +58,7 @@
           <form class="col-10 col-lg-2">
             <div class="input-group">
               <input type="text" class="form-control" placeholder="Search" />
-              <button class="btn btn-outline-secondary" type="submit">
+              <button class="btn search-button" type="submit">
                 <i class="bi bi-search"></i>
               </button>
             </div>
@@ -75,7 +73,7 @@
       </div>
       <div class="row">
         <div class="d-none d-lg-block col-lg-2">
-          <div class="bg-light p-3">
+          <div class="accordion__wrapper p-3">
             <div class="accordion" id="accordionExample">
               <div class="accordion-item mb-3">
                 <h2 class="accordion-header">
@@ -167,11 +165,13 @@
         </div>
         <div class="col-12 col-lg-8">
           <div class="row">
-            <div class="col-12 col-lg-6">
-              <article class="article mb-3 p-3 bg-light">
+            <div class="col-12 col-lg-6 mb-3">
+              <article
+                class="article article--primary d-flex flex-column justify-content-between mb-3 p-3 h-100"
+              >
                 <div class="row">
                   <div class="col-7 align-items-center">
-                    <h2 class="article-title text-center mb-4 mb-lg-5 fs-3">
+                    <h2 class="article__title text-center mb-4 mb-lg-5 fs-3">
                       Disneyland Paris
                     </h2>
                     <h3 class="fs-5">Case Study</h3>
@@ -181,23 +181,27 @@
                       visited theme park in the whole France and Europe.
                     </p>
                   </div>
-                  <div class="col-5 d-flex align-items-start">
+                  <div class="article__image col-5 d-flex align-items-start">
                     <img
                       src="assets/images/image-disney.jpg"
                       class="img-fluid"
                     />
                   </div>
                 </div>
-                <div class="text-end mt-2">
-                  <a class="article-link" href="#">Read more</a>
+                <div class="row">
+                  <div class="text-end mt-2 align-bottom">
+                    <a class="article__link" href="#">Read more</a>
+                  </div>
                 </div>
               </article>
             </div>
-            <div class="col-12 col-lg-6">
-              <article class="article mb-3 p-3 bg-light">
+            <div class="col-12 col-lg-6 mb-3">
+              <article
+                class="article article--primary d-flex flex-column justify-content-between mb-3 p-3 h-100"
+              >
                 <div class="row">
                   <div class="col-7 order-2 order-lg-1 align-items-center">
-                    <h2 class="article-title text-center mb-4 mb-lg-5 fs-3">
+                    <h2 class="article__title text-center mb-4 mb-lg-5 fs-3">
                       Turkish Airlines
                     </h2>
                     <h3 class="fs-5">Case Study</h3>
@@ -210,7 +214,7 @@
                     </p>
                   </div>
                   <div
-                    class="col-5 order-1 order-lg-2 d-flex align-items-start"
+                    class="article__image col-5 order-1 order-lg-2 d-flex align-items-start"
                   >
                     <img
                       src="assets/images/image-turkish.jpg"
@@ -219,21 +223,21 @@
                   </div>
                 </div>
                 <div class="text-start text-lg-end mt-2">
-                  <a class="article-link" href="#">Read more</a>
+                  <a class="article__link" href="#">Read more</a>
                 </div>
               </article>
             </div>
           </div>
           <div class="row">
-            <div class="col-12 col-lg-4">
-              <article class="article mb-3 p-3 bg-light">
+            <div class="col-12 col-lg-4 mb-3">
+              <article class="article article--secondary mb-3 p-3 h-100">
                 <div class="row">
                   <div class="col-12">
-                    <h2 class="article-title text-center mb-4 fs-3">
+                    <h2 class="article__title text-center mb-4 fs-3">
                       ACI Universal Payments
                     </h2>
                   </div>
-                  <div class="article-image col-12">
+                  <div class="article__image col-12">
                     <img src="assets/images/image-aci.jpg" class="img-fluid" />
                   </div>
                   <div class="col-12 mt-3">
@@ -248,13 +252,13 @@
                 </div>
               </article>
             </div>
-            <div class="col-12 col-lg-4">
-              <article class="article mb-3 p-3 bg-light">
+            <div class="col-12 col-lg-4 mb-3">
+              <article class="article article--secondary mb-3 p-3 h-100">
                 <div class="row">
                   <div class="col-12 order-1">
-                    <h2 class="article-title text-center mb-4 fs-3">AEG</h2>
+                    <h2 class="article__title text-center mb-4 fs-3">AEG</h2>
                   </div>
-                  <div class="article-image col-12 order-3 order-lg-2">
+                  <div class="article__image col-12 order-3 order-lg-2">
                     <img src="assets/images/image-aeg.jpg" class="img-fluid" />
                   </div>
                   <div class="col-12 order-2 order-lg-3 mt-1 mt-lg-3">
@@ -269,15 +273,15 @@
                 </div>
               </article>
             </div>
-            <div class="col-12 col-lg-4">
-              <article class="article mb-3 p-3 bg-light">
+            <div class="col-12 col-lg-4 mb-3">
+              <article class="article article--secondary mb-3 p-3 h-100">
                 <div class="row">
                   <div class="col-12">
-                    <h2 class="article-title text-center mb-4 fs-3">
+                    <h2 class="article__title text-center mb-4 fs-3">
                       IVC Evidensia
                     </h2>
                   </div>
-                  <div class="article-image col-12">
+                  <div class="article__image col-12">
                     <img
                       src="assets/images/image-evidensia.jpg"
                       class="img-fluid"
@@ -299,7 +303,8 @@
         </div>
       </div>
     </main>
-    <footer class="container-fluid bg-dark mt-3 py-3">
+
+    <footer class="footer container-fluid mt-3 py-3">
       <ul class="nav justify-content-center pb-3 mb-3 mb-lg-5">
         <li class="nav-item col-12 col-lg-2 mb-3">
           <a href="#" class="nav-link px-2 text-white">WHAT WE OFFER</a>
@@ -334,7 +339,7 @@
             </li>
           </ul>
         </li>
-        <li class="nav-item d-sm-none d-lg-block col-12 col-lg-2 mb-3">
+        <li class="nav-item d-none d-lg-block col-12 col-lg-2 mb-3">
           <a href="#" class="nav-link px-2 text-white">CAREERS</a>
           <ul class="p-2">
             <li>
@@ -357,7 +362,7 @@
             </li>
           </ul>
         </li>
-        <li class="nav-item d-sm-none d-lg-block col-12 col-lg-2 mb-3">
+        <li class="nav-item d-none d-lg-block col-12 col-lg-2 mb-3">
           <a href="#" class="nav-link px-2 text-white">CONTACT</a>
           <ul class="p-2">
             <li>
