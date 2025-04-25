@@ -1,50 +1,54 @@
-@use 'variables';
+@use '../core/colors' as *;
+@use '../core/settings' as *;
 
 .article {
     position: relative;
-    background-color: variables.$default-color;
+    background-color: $colorBackgroundMain;
     overflow: hidden;
-    padding: 10px 10px 35px 10px;
-    margin: 10px 10px 20px 10px;
+    padding: $padding-sm $padding-sm $padding-lg $padding-sm;
+    margin: $margin-sm $margin-sm $margin-md $margin-sm;
+
+    .article__text {
+        float: left;
+        padding: $padding-sm;
+        padding-top: 0;
+        width: 55%;
+    }
+
+    .article__title {
+        color: $colorExlrt;
+        font-weight: normal;
+        font-size: normal;
+        margin-bottom: $margin-md;
+        text-align: center;
+    }
+
+    .article__subtitle {
+        margin-top: $margin-lg;
+        font-weight: 450;
+        font-size: large;
+    }
+
+    .article__content {
+        font-size: small;
+        text-align: left;
+        margin-top: $margin-sm;
+    }
+
+    .article__image {
+        width: 45%;
+        height: 60%;
+    }
 }
 
-.article__text {
-    float: left;
-    padding: 0px 10px 10px 10px;
-    width: 55%;
-}
 
-.article__title {
-    color: variables.$exlrt-orange;
-    font-weight: normal;
-    font-size: normal;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.article__subtitle {
-    margin-top: 35px;
-    font-weight: 450;
-    font-size: large;
-}
-
-.article__content {
-    font-size: small;
-    text-align: left;
-    margin-top: 10px;
-}
-
-.article__image {
-    width: 45%;
-    height: 60%;
-}
 
 .article-primary {
     .article__image {
         height: 0;
         overflow: hidden;
         padding-top: 35%;
-        background: white;
+        background: $colorBackgroundMainLightest;
         position: relative;
 
         img {
@@ -58,7 +62,7 @@
 }
 
 .article-secondary {
-    padding-bottom: 10px;
+    padding-bottom: $padding-sm;
 
     .article__image {
         width: 100%;
@@ -78,8 +82,8 @@
     position:absolute;
     bottom:0;
     right:0;
-    margin: 0 10px 10px 0;
-    color:deepskyblue;
+    margin: 0 $margin-sm $margin-sm 0;
+    color: $colorLinkTertiary;
     font-size: normal;
 }
 
@@ -91,7 +95,7 @@
 
         .article__footer-link {
             left: 0;
-            margin-left: 10px;
+            margin-left: $margin-sm;
         }
     }
 
@@ -130,13 +134,13 @@
     .article-primary {
         min-height: 300px;
         height: auto;
-        margin-bottom: 20px;
+        margin-bottom: $margin-md;
 
         .article__image {
             height: 0;
             overflow: hidden;
             padding-top: 35%;
-            background: white;
+            background: $colorBackgroundMainLightest;
             position: relative;
         }
 
@@ -151,15 +155,16 @@
 
     .article-secondary {
         min-height: 360px;
-        margin: 0px 10px 10px 10px;
+        margin: $margin-sm;
+        margin-top: 0px;
 
         .article__title {
-            margin-top: 10px;
+            margin-top: $margin-sm;
         }
 
         .article__content {
             float: left;
-            margin-top: 20px;
+            margin-top: $margin-md;
         }
 
         .article__image {
@@ -181,7 +186,7 @@
 
     .article__title {
         font-size: x-large;
-        margin-bottom: 20px;
+        margin-bottom: $margin-md;
     }
 
     .article__content {

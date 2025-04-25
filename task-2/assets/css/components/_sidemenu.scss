@@ -1,4 +1,5 @@
-@use 'variables';
+@use '../core/colors' as *;
+@use '../core/settings' as *;
 
 @media (max-width:1024px) {
     .content-box__menu {
@@ -9,25 +10,25 @@
 .content-box__menu {
     float: left;
     width: 20%;
-    padding: 10px;
+    padding: $padding-sm;
     text-align: center
 }
 
 .menu {
     width: 90%;
-    background-color: #d3d3d3;
-    padding: 10px;
-    border-radius: 6px;
+    background-color: $colorBackgroundMain;
+    padding: $padding-sm;
+    border-radius: $radius-sm;
     margin-left: auto;
     margin-right: auto;
   }
 
 .menu__item {
     background-color: #999;
-    color: white;
-    padding: 8px 10px;
-    margin-bottom: 6px;
-    border-radius: 4px;
+    color: $colorBackgroundMainLightest;
+    padding: $padding-sm;
+    margin-bottom: $margin-sm;
+    border-radius: $radius-xs;
     font-size: normal;
     text-align: left;
 
@@ -41,17 +42,17 @@
     padding: 0;
 
     .menu__label {
-        padding: 8px;
-        border-radius: 4px 4px 0 0;
-        background-color: #f58220;
+        padding: $padding-sm;
+        border-radius: $radius-xs $radius-xs 0 0;
+        background-color: $colorExlrt;
     }
 }
 
 .submenu {
     list-style: none;
-    padding: 10px;
-    background-color: white;
-    border-radius: 0 0 4px 4px;
+    padding: $padding-sm;
+    background-color: $colorBackgroundMainLightest;
+    border-radius: 0 0 $radius-xs $radius-xs;
     overflow: hidden;
 
     li {
@@ -61,6 +62,6 @@
     a {
         display: block;
         color: #000;
-        margin: 4px 0;
+        margin: $margin-xs 0;
     }
 }

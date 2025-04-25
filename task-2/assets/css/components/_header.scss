@@ -1,8 +1,9 @@
-@use 'mixins';
-@use 'variables';
+@use '../core/colors' as *;
+@use '../core/settings' as *;
+@use '../core/mixins' as *;
 
 .header {
-    background-color: variables.$default-color;
+    background-color: $colorBackgroundMain;
     overflow: hidden;
 }
 
@@ -14,22 +15,22 @@
     float: right;
     width: 40%;
     max-width: 100%;
-    margin: 10px;
+    margin: $margin-sm;
 }
 
 .header__burger {
-    margin: 15px;
     float: left;
     width: 10%;
     max-width: 100%;
+    margin: $margin-md;
 }
 
 .header__nav {
     display: inline-block;
     width: 90%;
     height: 200px;
-    padding: 10px;
-    background-color: variables.$dropdown-color
+    padding: $padding-sm;
+    background-color: $colorBackgroundMainDarker
 }
 
 .nav {
@@ -41,32 +42,32 @@
 .nav__links {
     vertical-align: middle;
     list-style: none;
-    padding: 5px;
     overflow: hidden;
-    background-color: variables.$dropdown-color;
-    border-color: variables.$dropdown-color;
+    padding: $padding-xs;
+    background-color: $colorBackgroundMainDarker;
+    border-color: $colorBackgroundMainDarker;
 
     a {
-        @include mixins.link(black);
+        @include link(black);
         text-align: center;
         font-size: small;
-        margin: 10px;
+        margin: $margin-sm;
     }
 }
 
 .nav__search-bar {
     float: left;
     width: 90%;
-    background-color: variables.$dropdown-color;
-    border-color: variables.$dropdown-color;
-    padding: 10px;
+    background-color: $colorBackgroundMainDarker;
+    border-color: $colorBackgroundMainDarker;
+    padding: $padding-sm;
     white-space: nowrap;
 
     input {
         display: inline-block;
         width: 80%;
         height: 40px;
-        padding: 10px 15px;
+        padding: $padding-sm $padding-md;
         border: none;
         border-right: white;
         font-size: small;
@@ -113,14 +114,14 @@
     .header__logo {
         width: 100%;
         margin: 0;
-        padding: 20px 0 20px 20px;
+        padding: $padding-md;
     }
 
     .header__nav {
         float: left;
-        width: 90%;
         height: auto;
-        background-color: variables.$default-color
+        width: 90%;
+        background-color: $colorBackgroundMain
     }
 
     .nav {
@@ -130,9 +131,9 @@
 
     .nav__links {
         text-align: center;
-        margin-top: 20px;
-        padding: 5px;
-        background-color: variables.$default-color;
+        margin-top: $margin-md;
+        padding: $padding-sm;
+        background-color: $colorBackgroundMain;
     }
 
     .nav__links li {
@@ -140,7 +141,7 @@
     }
 
     .nav__links a {
-        color: black;
+        color: $colorLinkPrimary;
         text-align: center;
         text-decoration: none;
         font-weight: normal;
@@ -148,15 +149,14 @@
     }
 
     header li + li::before {
-        margin-right: 5px;
-        margin-left: 5px;
+        margin: 0 $margin-sm;
         content: '| ';
     }
 
     .nav__search-bar {
         float: left;
         width: 15%;
-        background-color: variables.$default-color;
+        background-color: $colorBackgroundMain;
         padding: 10px;
         white-space: nowrap;
     }
