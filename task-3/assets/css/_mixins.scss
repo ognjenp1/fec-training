@@ -1,0 +1,7 @@
+@mixin equal-height($elements...) {
+    @each $el in $elements {
+        #{$el} {
+            height: 100%;
+        }
+    }
+}

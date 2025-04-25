@@ -17,6 +17,10 @@
   background-color: white;
 }
 
+article {
+  height: 100%;
+}
+
 .article {
   position: relative;
   background-color: #e9e9e9;

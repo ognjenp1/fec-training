@@ -1,3 +1,5 @@
+@use 'mixins' as *;
+
 * {
     margin: 0;
     padding: 0;
@@ -23,6 +25,8 @@ $padding-small: 8px;
 .search-button {
     background-color: white;
 }
+
+@include equal-height(article);
 
 .article {
     position: relative;
