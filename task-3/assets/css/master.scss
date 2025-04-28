@@ -111,9 +111,17 @@ $padding-small: 8px;
 @media (max-width: 991px) {
     .navbar-collapse {
         background-color: $secondary-bg-color;
+        flex-grow: 0;
+        flex-basis: auto;
+        width: 80%;
     }
 
-    .header ::after(.navbar-collapse){
+    .custom__wrapper {
+        display: flex;
+        background-color: $primary-bg-color;
+    }
+
+    .header{
         background-color: white;
     }
 }
