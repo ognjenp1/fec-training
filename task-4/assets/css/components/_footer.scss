@@ -1,0 +1,35 @@
+@use '../core/colors' as *;
+@use '../core/settings' as *;
+@use '../core/mixins' as *;
+
+.footer {
+    grid-area: footer;
+    background-color: $colorFooterMain;
+    font-size: small;
+    padding: $padding-md;
+    color: $colorLinkSecondary;
+
+    ul {
+        list-style-type: none;
+    }
+}
+
+.footer__column {
+    display: block;
+    margin-bottom: $margin-xxl;
+
+    li {
+        margin: $margin-md 0;
+    }
+
+    a {
+        @include link($colorLinkSecondary);
+    }
+}
+
+.footer__footnote {
+    max-width: fit-content;
+    margin: $margin-xxl auto 0 auto;
+    font-weight: 300;
+    font-size: x-small;
+}

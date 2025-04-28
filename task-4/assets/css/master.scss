@@ -1,0 +1,29 @@
+@use 'core/settings' as *;
+@use 'components/header' as *;
+@use 'components/articles' as *;
+@use 'components/footer' as *;
+
+.grid-container {
+    display: grid;
+    max-width: 100;
+    grid-template-rows   : 300px 1fr auto;
+    grid-template-areas:
+    "header"
+    "main"
+    "footer";
+}
+
+.content-box {
+    min-height: 100vh;
+    grid-area: main;
+    display: grid;
+    grid-template-rows: 50px 1fr;
+    grid-template-columns: 1fr;
+}
+
+.content-box__title {
+    font-weight: normal;
+    font-size: xx-large;
+    text-align: center;
+    padding: $padding-sm;
+}
