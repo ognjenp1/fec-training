@@ -35,10 +35,8 @@
     font-size: x-small;
 }
 
-@media (max-width:1024px) {
-    .footer__column + .footer__column + .footer__column {
-        display: none;
-    }
+.footer__column + .footer__column + .footer__column {
+    display: none;
 }
 
 @media (min-width:1025px) {
@@ -60,5 +58,9 @@
 
     .footer__footnote {
         font-size: small;
+    }
+
+    .footer__column + .footer__column + .footer__column {
+        display: inline-block;
     }
 }

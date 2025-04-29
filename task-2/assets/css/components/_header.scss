@@ -88,17 +88,19 @@
     }
 }
 
-@media (max-width: 1024px){
-    .header__nav {
-        clear: both;
+.header__nav {
+    clear: both;
 
-        ~ div {
-            float: right;
-            background-color: white;
-            width: 10%;
-            height: 200px;
-        }
+    ~ div {
+        float: right;
+        background-color: white;
+        width: 10%;
+        height: 200px;
     }
+}
+
+@media (max-width: 1024px){
+   
 }
 
 @media (min-width: 1025px) {
@@ -121,7 +123,17 @@
         float: left;
         height: auto;
         width: 90%;
-        background-color: $colorBackgroundMain
+        background-color: $colorBackgroundMain;
+
+        clear:none;
+
+        ~ div {
+            display: none;
+            float: right;
+            background-color: white;
+            width: 10%;
+            height: 200px;
+        }
     }
 
     .nav {
