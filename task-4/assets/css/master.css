@@ -161,8 +161,11 @@
     font-size: normal;
     display: inline-block;
   }
+  .menu__item .menu__label {
+    display: grid;
+    grid-template-columns: 1fr auto;
+  }
   .menu__item .icon {
-    float: right;
     font-weight: bold;
   }
   .menu__item--selected {
