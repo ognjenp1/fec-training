@@ -38,6 +38,7 @@
         min-height: auto;
         grid-template-rows: 100px 1fr;
         grid-template-columns: 1fr 3fr 1fr;
+        padding-bottom: $padding-lg;
     }
 
     .content-box__title {

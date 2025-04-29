@@ -178,7 +178,7 @@
 
 
         .article__details {
-            grid-template-rows: 60% auto;
+            grid-template-rows: repeat(2, auto);
         }
 
         .article__image {
@@ -193,7 +193,7 @@
         // Reversing mobile modifiers
         &--flipped {
             .article__details {
-                grid-template-rows: 60% auto;
+                grid-template-rows: repeat(2, auto);
             }
 
             .article__content {
