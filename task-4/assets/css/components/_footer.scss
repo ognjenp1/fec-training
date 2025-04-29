@@ -7,6 +7,7 @@
     background-color: $colorFooterMain;
     font-size: small;
     padding: $padding-md;
+    padding-top: $padding-lg;
     color: $colorLinkSecondary;
 
     ul {
@@ -14,9 +15,14 @@
     }
 }
 
+.footer__columns {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
 .footer__column {
     display: block;
-    margin-bottom: $margin-xxl;
+    margin-bottom: $margin-xl;
 
     li {
         margin: $margin-md 0;
@@ -27,9 +33,14 @@
     }
 }
 
+.footer__column + .footer__column + .footer__column {
+    display: none;
+}
+
 .footer__footnote {
+    grid-area: 3/1/4/2;
     max-width: fit-content;
-    margin: $margin-xxl auto 0 auto;
+    margin: 0 auto;
     font-weight: 300;
-    font-size: x-small;
+    font-size: small;
 }
