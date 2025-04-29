@@ -1,5 +1,6 @@
 @use 'core/settings' as *;
 @use 'components/header' as *;
+@use 'components/sidemenu' as *;
 @use 'components/articles' as *;
 @use 'components/footer' as *;
 
@@ -16,7 +17,6 @@
 .content-box {
     min-height: 100vh;
     grid-area: main;
-    display: grid;
     grid-template-rows: 50px 1fr;
     grid-template-columns: 1fr;
 }
@@ -26,4 +26,22 @@
     font-size: xx-large;
     text-align: center;
     padding: $padding-sm;
+}
+
+@media (min-width: $desktop) {
+    .grid-container {
+        grid-template-rows: 80px 1fr auto;
+    }
+
+    .content-box {
+        display: grid;
+        min-height: auto;
+        grid-template-rows: 100px 1fr;
+        grid-template-columns: 1fr 3fr 1fr;
+    }
+
+    .content-box__title {
+        grid-area: 1/1/2/4;
+        padding: $padding-lg;
+    }
 }

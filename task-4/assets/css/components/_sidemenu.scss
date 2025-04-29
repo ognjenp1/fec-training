@@ -1,0 +1,68 @@
+@use '../core/colors' as *;
+@use '../core/settings' as *;
+@use '../core/mixins' as *;
+
+.content-box__menu {
+    display: none;
+}
+
+@media (min-width: $desktop) {
+    .content-box__menu {
+        display: grid;
+        height: fit-content;
+        width: 80%;
+        padding: $padding-sm;
+        justify-self: center;
+    }
+
+    .menu {
+        display: grid;
+        grid-template-rows: repeat(4, auto);
+        row-gap: $padding-sm;
+        background-color: $colorBackgroundMain;
+        padding: $padding-sm;
+        border-radius: $radius-sm;
+      }
+
+    .menu__item {
+        background-color: #999;
+        color: $colorBackgroundMainLightest;
+        padding: $padding-sm;
+        border-radius: $radius-sm;
+        font-size: normal;
+        display: inline-block;
+
+        .icon {
+            float: right;
+            font-weight: bold;
+        }
+      }
+
+    .menu__item--selected {
+        padding: 0;
+
+        .menu__label {
+            padding: $padding-sm;
+            border-radius: $radius-sm $radius-sm 0 0;
+            background-color: $colorExlrt;
+        }
+    }
+
+    .submenu {
+        list-style: none;
+        padding: $padding-sm;
+        background-color: $colorBackgroundMainLightest;
+        border-radius: 0 0 $radius-sm $radius-sm;
+        overflow: hidden;
+
+        li {
+            margin: 0;
+        }
+
+        a {
+            display: block;
+            color: #000;
+            margin: $margin-xs 0;
+        }
+    }
+}
