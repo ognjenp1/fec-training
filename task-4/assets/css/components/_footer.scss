@@ -49,6 +49,7 @@
 
         .footer__columns {
             grid-template-columns: repeat(4, 1fr);
+            column-gap: $padding-lg;
             width: 60%;
             justify-self: center;
             padding: $padding-lg;

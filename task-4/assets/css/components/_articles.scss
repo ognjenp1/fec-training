@@ -10,7 +10,7 @@
 .article {
     display: grid;
     overflow: hidden;
-    padding: $padding-sm $padding-sm $padding-sm $padding-sm;
+    padding: $padding-sm;
     margin: $margin-sm $margin-sm $margin-md $margin-sm;
     background-color: $colorBackgroundMain;
 
@@ -138,24 +138,47 @@
 
 @media (min-width: $desktop) {
     .content-box__articles {
-        grid-template-rows: 1fr 1.3fr;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-gap: 10px;
 
-        .row-one {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
+        .article-primary {
+            grid-column: span 6;
         }
 
-        .row-two {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
+        .article-secondary {
+            grid-column: span 4;
         }
+
+        // .article:nth-child(1) {
+        //     grid-row-start: 1;
+        //     grid-column: 1 / span 6;
+        // }
+        // .article:nth-child(2) {
+        //     grid-row-start: 1;
+        //     grid-column: 7 / span 6;
+        // }
+
+        // .article:nth-last-child(-n + 3) {
+        //     grid-column: span 4;
+        // }
+
+        // .row-one {
+        //     display: grid;
+        //     grid-template-columns: repeat(2, 1fr);
+        // }
+
+        // .row-two {
+        //     display: grid;
+        //     grid-template-columns: repeat(3, 1fr);
+        // }
     }
 
     .article-primary {
 
         // Reversing mobile modifiers
         &--flipped {
-            grid-template-columns: 55% 45%;
+            grid-template-columns: 11fr 9fr;
 
             .article__text {
                 grid-area: 1/1/2/2;
