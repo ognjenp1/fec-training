@@ -41,7 +41,7 @@
 }
 
 .article-primary {
-    grid-template-columns: 55% 45%;
+    grid-template-columns: 11fr 9fr;
     grid-template-rows: 3fr auto;
 
     .article__text {
@@ -81,7 +81,7 @@
     }
 
     &--flipped {
-        grid-template-columns: 45% 55%;
+        grid-template-columns: 9fr 11fr;
 
         .article__text {
             grid-area: 1/2/2/3;

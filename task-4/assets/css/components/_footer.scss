@@ -16,7 +16,6 @@
 
     .footer__columns {
         display: grid;
-        grid-template-rows: 1fr 1fr;
     }
 
     .footer__column {
@@ -46,13 +45,10 @@
 
 @media (min-width: $desktop) {
     .footer {
-        display: grid;
-        grid-template-rows: 1fr auto;
         font-size: large;
 
         .footer__columns {
             grid-template-columns: repeat(4, 1fr);
-            grid-template-rows: 100%;
             width: 60%;
             justify-self: center;
             padding: $padding-lg;
