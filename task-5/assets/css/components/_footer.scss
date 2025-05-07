@@ -1,0 +1,62 @@
+@use '../core/colors' as *;
+@use '../core/settings' as *;
+@use '../core/mixins' as *;
+
+.footer {
+    background-color: $colorFooterMain;
+    font-size: small;
+    padding: $padding-md;
+    padding-top: $padding-lg;
+    color: $colorLinkSecondary;
+
+    ul {
+        list-style-type: none;
+    }
+
+    .footer__columns {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer__column {
+        margin-bottom: $margin-xl;
+
+        li {
+            margin: $margin-md 0;
+        }
+
+        a {
+            @include link($colorLinkSecondary);
+        }
+    }
+
+    .footer__column + .footer__column + .footer__column {
+        display: none;
+    }
+
+    .footer__footnote {
+        justify-self: center;
+        font-weight: 300;
+        font-size: small;
+    }
+}
+
+@media (min-width: $desktop) {
+    .footer {
+        font-size: large;
+
+        .footer__columns {
+            flex-direction: row;
+            width: 60%;
+            justify-self: center;
+            justify-content: space-between;
+            padding: $padding-lg;
+            column-gap: $padding-lg;
+        }
+
+        // Reversing mobile modifiers
+        .footer__column + .footer__column + .footer__column {
+            display: block;
+        }
+    }
+}

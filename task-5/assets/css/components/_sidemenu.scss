@@ -1,0 +1,73 @@
+@use '../core/colors' as *;
+@use '../core/settings' as *;
+@use '../core/mixins' as *;
+
+.content-box__menu {
+    display: none;
+}
+
+@media (min-width: $desktop) {
+    .content-box__menu {
+        display: flex;
+        flex-basis: 20%;
+        align-items: flex-start;
+        justify-content: center;
+        padding: $padding-sm;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+        flex-basis: 80%;
+        row-gap: $padding-sm;
+        background-color: $colorBackgroundMain;
+        padding: $padding-sm;
+        border-radius: $radius-sm;
+      }
+
+    .menu__item {
+        background-color: #999;
+        color: $colorBackgroundMainLightest;
+        padding: $padding-sm;
+        border-radius: $radius-sm;
+        font-size: normal;
+        display: inline-block;
+
+        .menu__label {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .icon {
+            font-weight: bold;
+        }
+
+        &--selected {
+            padding: 0;
+
+            .menu__label {
+                padding: $padding-sm;
+                border-radius: $radius-sm $radius-sm 0 0;
+                background-color: $colorExlrt;
+            }
+        }
+    }
+
+    .submenu {
+        list-style: none;
+        padding: $padding-sm;
+        background-color: $colorBackgroundMainLightest;
+        border-radius: 0 0 $radius-sm $radius-sm;
+        overflow: hidden;
+
+        li {
+            margin: 0;
+        }
+
+        a {
+            display: block;
+            color: #000;
+            margin: $margin-xs 0;
+        }
+    }
+}

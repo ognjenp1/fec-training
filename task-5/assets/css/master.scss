@@ -1,0 +1,26 @@
+@use 'core/settings' as *;
+@use 'components/header' as *;
+@use 'components/sidemenu' as *;
+@use 'components/articles' as *;
+@use 'components/footer' as *;
+
+
+.content-box__title {
+    font-weight: normal;
+    font-size: xx-large;
+    text-align: center;
+    padding: $padding-md;
+}
+
+@media (min-width: $desktop) {
+    .content-box {
+        display: flex;
+        flex-wrap: wrap;
+        padding-bottom: $padding-lg;
+    }
+
+    .content-box__title {
+        flex-basis: 100%;
+        padding: $padding-lg;
+    }
+}

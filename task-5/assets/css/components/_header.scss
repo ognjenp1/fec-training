@@ -1,0 +1,139 @@
+@use '../core/colors' as *;
+@use '../core/settings' as *;
+@use '../core/mixins' as *;
+
+.header {
+    display: flex;
+    flex-direction: column;
+
+    .header__images {
+        display: flex;
+        justify-content: space-between;
+        background-color: $colorBackgroundMain;
+    }
+
+    .header__logo {
+        height: 50px;
+        max-width: 100%;
+        padding: $padding-sm;
+    }
+
+    .header__burger {
+        height: 50px;
+        max-width: 100%;
+        padding: $padding-sm;
+    }
+
+    .header__nav {
+        background-color: $colorBackgroundMainDarker;
+        width: 80%;
+    }
+}
+
+.nav__links {
+    vertical-align: middle;
+    list-style: none;
+    overflow: hidden;
+    padding: $padding-sm;
+    background-color: $colorBackgroundMainDarker;
+    border-color: $colorBackgroundMainDarker;
+
+    li {
+        margin: $margin-xs 0;
+    }
+
+    a {
+        @include link(black);
+        text-align: center;
+        font-size: small;
+    }
+}
+
+.nav__search-bar {
+    background-color: $colorBackgroundMainDarker;
+    border-color: $colorBackgroundMainDarker;
+    padding: $padding-sm;
+    white-space: nowrap;
+
+    input {
+        display: inline-block;
+        width: 80%;
+        height: 50px;
+        padding: $padding-sm $padding-md;
+        border: none;
+        border-right: white;
+        font-size: small;
+    }
+
+    button {
+        display: inline-block;
+        width: 40px;
+        height: 50px;
+        margin: 0;
+        background-image: url('../images/icon-search.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 20px 20px;
+        background-color: white;
+        border: none;
+        vertical-align: top;
+    }
+}
+
+@media (min-width: $desktop) {
+    .header {
+        flex-direction: row;
+
+        .header__images {
+            flex: 15%;
+        }
+
+        .header__logo {
+            justify-self: center;
+            height: auto;
+            width: 100%;
+        }
+
+        .header__burger {
+            display: none;
+        }
+
+        .header__nav {
+            display: flex;
+            flex: 85%;
+            background-color: $colorBackgroundMain;
+        }
+    }
+
+    .nav {
+        align-self: center;
+        justify-items: center;
+        flex: 80%;
+
+        .nav__links {
+            background-color: $colorBackgroundMain;
+
+            li {
+                display: inline;
+            }
+
+            a {
+                color: $colorLinkPrimary;
+                text-align: center;
+                text-decoration: none;
+                font-weight: normal;
+                font-size: medium;
+            }
+        }
+    }
+
+    .nav__search-bar {
+        align-self: center;
+        background-color: $colorBackgroundMain;
+    }
+
+    header li + li::before {
+        margin: 0 $margin-sm;
+        content: '| ';
+    }
+}
