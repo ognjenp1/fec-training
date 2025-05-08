@@ -391,10 +391,6 @@
   }
   .footer .footer__columns {
     grid-template-columns: repeat(4, 1fr);
-    -moz-column-gap: 32px;
-         column-gap: 32px;
-    width: 60%;
-    justify-self: center;
     padding: 32px;
   }
   .footer .footer__column + .footer__column + .footer__column {
@@ -406,6 +402,13 @@
   max-width: 100;
   grid-template-rows: 300px 1fr auto;
   grid-template-areas: "header" "main" "footer";
+}
+
+.container {
+  margin: auto;
+  max-width: 75rem;
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
 }
 
 .content-box {
