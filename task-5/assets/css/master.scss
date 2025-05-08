@@ -12,6 +12,11 @@
     padding: $padding-md;
 }
 
+.container {
+    margin: auto;
+    max-width: 75rem;
+}
+
 @media (min-width: $desktop) {
     .content-box {
         display: flex;

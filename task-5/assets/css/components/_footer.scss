@@ -47,11 +47,8 @@
 
         .footer__columns {
             flex-direction: row;
-            width: 60%;
-            justify-self: center;
             justify-content: space-between;
             padding: $padding-lg;
-            column-gap: $padding-lg;
         }
 
         // Reversing mobile modifiers
